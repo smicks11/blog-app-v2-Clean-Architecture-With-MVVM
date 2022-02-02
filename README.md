@@ -3,9 +3,9 @@
 An initial blog app on my repo refactored and built with clean architecture with MVVM, including presentation layer, data layer, domain layer and application layer step by step. A design principle that helps keep business logic, or domain logic, together and minimize the dependencies within the system.
 
 **Some Snapshots**
-[My image](https://github.com/smicks11/blog-app-v2-Clean-Architecture-With-MVVM/blob/master/images/Screenshot_2022-02-02-23-23-20-582_com.example.blog_app_v2.jpg)
-https://github.com/smicks11/blog-app-v2-Clean-Architecture-With-MVVM/blob/master/images/Screenshot_2022-02-02-23-23-43-879_com.example.blog_app_v2.jpg
-https://github.com/smicks11/blog-app-v2-Clean-Architecture-With-MVVM/blob/master/images/Screenshot_2022-02-02-23-23-53-174_com.example.blog_app_v2.jpg
+![Screenshot_2022-02-02-23-23-20-582_com example blog_app_v2](https://user-images.githubusercontent.com/64984175/152255034-c82b542b-9a42-44d4-bcf7-03774346bdf3.jpg)
+![Screenshot_2022-02-02-23-23-43-879_com example blog_app_v2](https://user-images.githubusercontent.com/64984175/152255057-89efadd2-9b12-4e51-a1be-158ec9ea4568.jpg)
+![Screenshot_2022-02-02-23-23-53-174_com example blog_app_v2](https://user-images.githubusercontent.com/64984175/152255069-0c119f05-4e39-4271-95ee-e7b33c52d03b.jpg)
 
 ## Getting Started
 
