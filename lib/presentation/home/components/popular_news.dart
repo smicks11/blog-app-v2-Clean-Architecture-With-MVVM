@@ -5,7 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PopularNews extends StatelessWidget {
-  const PopularNews({Key? key}) : super(key: key);
+  final String? title;
+  final String? bannerImg;
+  final String? authorImg;
+  final String? desc;
+  final String? authorName;
+  const PopularNews({Key? key, this.title, this.bannerImg, this.authorImg, this.desc, this.authorName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +37,7 @@ class PopularNews extends StatelessWidget {
                       maxHeight: 100.0,
                     ),
                     child: Text(
-                      "Higher technology",
+                      title!,
                       style: GoogleFonts.lato(
                           textStyle: TextStyle(
                         fontSize: 16,
@@ -55,13 +60,14 @@ class PopularNews extends StatelessWidget {
                       maxHeight: 100.0,
                     ),
                     child: Text(
-                      "Higher technology and administrative costs hurt the brokerage’s fourth-quarter results",
+                      desc!,
                       style: GoogleFonts.lato(
                           textStyle: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
                         // color: Colors.black26
                       )),
+                      overflow: TextOverflow.ellipsis,
                       // minFontSize: 13,
                       // maxLines: 2,
                       // overflow: TextOverflow.ellipsis,
@@ -78,7 +84,7 @@ class PopularNews extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: Text(
-                        "By Mc Clean",
+                        authorName!,
                         style: TextStyle(
                           fontSize: 14,
                           // color: Colors.black87,
@@ -116,7 +122,7 @@ class PopularNews extends StatelessWidget {
               // margin: EdgeInsets.only(right: 20),
               child: ClipRRect(
                 child: Image.network(
-                  "https://www.gannett-cdn.com/-mm-/f7ca81465e42ddddcdabb48766ae70ca2213a61b/c=317-0-4546-2389/local/-/media/USATODAY/USATODAY/2014/11/18/635519291179856833-AP-Earns-Lowes.jpg?auto=webp&format=pjpg&width=1200",
+                  bannerImg!,
                   fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.circular(10),

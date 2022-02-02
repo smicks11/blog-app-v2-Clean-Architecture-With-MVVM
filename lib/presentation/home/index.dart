@@ -32,6 +32,7 @@ class _HomeViewState extends State<HomeView> {
         child: StreamBuilder<NewsViewObject>(
           stream: _viewModel.outputHomeData,
           builder: (context, snapshot) {
+            print(snapshot.data?.data.length);
               return _contentWidget(snapshot.data);
           }
         ),
@@ -42,8 +43,9 @@ class _HomeViewState extends State<HomeView> {
 
   
 Widget _contentWidget (NewsViewObject? newsViewObject) {
+  print(newsViewObject);
   if(newsViewObject == null){
-    return Container(child: Center(child: Text("An error occured")));
+    return Container(child: Center(child: CircularProgressIndicator()));
   } else {
         return Container(
       height: double.infinity,
@@ -101,12 +103,18 @@ Widget _contentWidget (NewsViewObject? newsViewObject) {
             width: double.infinity,
             // color: Colors.blue,
             child: ListView.builder(
-              itemCount: 3,
+              itemCount: newsViewObject.data.length,
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
               physics: BouncingScrollPhysics(),
               itemBuilder: (context, index) {
-                return FeaturedNews();
+                return FeaturedNews(
+                  title: newsViewObject.data[index].title,
+                  bannerImg: newsViewObject.data[index].urlToImage,
+                  authorImg: newsViewObject.data[index].urlToImage,
+                  desc: newsViewObject.data[index].description,
+                  authorName: newsViewObject.data[index].author
+                );
               },
             ),
           ),
@@ -140,11 +148,17 @@ Widget _contentWidget (NewsViewObject? newsViewObject) {
             // width: double.infinity,
             child: ListView.builder(
               physics: NeverScrollableScrollPhysics(),
-              itemCount: 10,
+              itemCount: newsViewObject.data.length,
               shrinkWrap: true,
               scrollDirection: Axis.vertical,
               itemBuilder: (_, index) {
-                return PopularNews();
+                return PopularNews(
+                  title: newsViewObject.data[index].title,
+                  bannerImg: newsViewObject.data[index].urlToImage,
+                  authorImg: newsViewObject.data[index].urlToImage,
+                  desc: newsViewObject.data[index].description,
+                  authorName: newsViewObject.data[index].author
+                );
               },
             ),
           )

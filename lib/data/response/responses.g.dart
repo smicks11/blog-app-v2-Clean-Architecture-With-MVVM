@@ -53,7 +53,7 @@ Map<String, dynamic> _$HomeDataResponseToJson(HomeDataResponse instance) =>
 
 NewsResponse _$NewsResponseFromJson(Map<String, dynamic> json) {
   return NewsResponse(
-    HomeDataResponse.fromJson(json['data'] as Map<String, dynamic>),
+    HomeDataResponse.fromJson(json),
   )..status = json['status'] as String?;
 }
 

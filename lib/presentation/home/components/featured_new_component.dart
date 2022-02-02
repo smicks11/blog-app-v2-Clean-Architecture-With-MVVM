@@ -5,7 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FeaturedNews extends StatelessWidget {
-  const FeaturedNews({Key? key}) : super(key: key);
+  final String? title;
+  final String? bannerImg;
+  final String? authorImg;
+  final String? desc;
+  final String? authorName;
+  const FeaturedNews({Key? key, this.title, this.authorImg, this.bannerImg, this.desc, this.authorName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +21,7 @@ class FeaturedNews extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           ClipRRect(
             child: Image.network(
-              "https://images.wsj.net/im-474424/social",
+              bannerImg!,
               height: 180,
               width: MediaQuery.of(context).size.width * 0.9,
               fit: BoxFit.cover,
@@ -36,7 +41,7 @@ class FeaturedNews extends StatelessWidget {
                   maxHeight: 100.0,
                 ),
                 child: Text(
-                  "Higher technology and administrative costs hurt the brokerage’s fourth-quarter results",
+                  desc!,
                   style: GoogleFonts.lato(
                       textStyle: TextStyle(
                     fontSize: 20,
@@ -57,7 +62,7 @@ class FeaturedNews extends StatelessWidget {
                       width: 30,
                       child: ClipRRect(
                         child: Image.network(
-                          "https://images.wsj.net/im-474424/social",
+                          authorImg!,
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.circular(10),
@@ -75,7 +80,7 @@ class FeaturedNews extends StatelessWidget {
                           maxHeight: 40.0,
                         ),
                         child: Text(
-                          "Caitlin McCabe",
+                          authorName!,
                           style: TextStyle(
                             fontSize: 15,
                             // color: Colors.black54,

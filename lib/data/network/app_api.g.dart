@@ -28,7 +28,6 @@ class _AppServiceClient implements AppServiceClient {
             queryParameters: queryParameters, data: _data)
         .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = NewsResponse.fromJson(_result.data!);
-    print('value: $value');
     return value;
   }
 
