@@ -1,6 +1,11 @@
 # blog_app_v2
 
-A new Flutter project.
+An initial blog app on my repo refactored and built with clean architecture with MVVM, including presentation layer, data layer, domain layer and application layer step by step. A design principle that helps keep business logic, or domain logic, together and minimize the dependencies within the system.
+
+**Some Snapshots**
+https://github.com/smicks11/blog-app-v2-Clean-Architecture-With-MVVM/blob/master/images/Screenshot_2022-02-02-23-23-20-582_com.example.blog_app_v2.jpg
+https://github.com/smicks11/blog-app-v2-Clean-Architecture-With-MVVM/blob/master/images/Screenshot_2022-02-02-23-23-43-879_com.example.blog_app_v2.jpg
+https://github.com/smicks11/blog-app-v2-Clean-Architecture-With-MVVM/blob/master/images/Screenshot_2022-02-02-23-23-53-174_com.example.blog_app_v2.jpg
 
 ## Getting Started
 
